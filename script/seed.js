@@ -1,16 +1,20 @@
 const db = require('../server/db/db');
 const BigMac = require('../server/models/bigMac');
+const csv = require('csvtojson');
+const csvdata = 'big-mac-adjusted-index.csv';
+
+async function convert() {
+  const jsonObj = await csv().fromFile(csvdata);
+  return jsonObj;
+}
 
 async function seed() {
   await db.sync({ force: true });
   console.log('db synced');
 
-  await BigMac.create({
-    date: '2021-01-01',
-    code: 'USA',
-    name: 'America',
-    price: 5.66,
-  });
+  const data = await convert();
+
+  await BigMac.bulkCreate(data);
   console.log('seeding successful');
 }
 

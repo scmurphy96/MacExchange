@@ -2,9 +2,6 @@ const Sequelize = require('sequelize');
 const db = require('../db/db');
 
 const BigMac = db.define('bigmac', {
-  date: {
-    type: Sequelize.DATEONLY,
-  },
   code: {
     type: Sequelize.STRING,
   },
