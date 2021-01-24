@@ -1,32 +1,48 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchCountries } from '../store/countries';
+import SelectCountry from './SelectCountry';
+import Form from './Form';
 
 class HomePage extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      amount: 0,
+      country: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+  }
+
   componentDidMount() {
     this.props.fetchCountries();
   }
   render() {
-    console.log(this.props);
     return (
       <div>
         <div id="title">
           <h1>Welcome to MacExchange!</h1>
         </div>
-        <div>
-          <form id="input-dollar-amount" onSubmit={this.handleSubmit}>
-            <label htmlFor="dollar-amount">Dollar Amount:</label>
-            <input name="dollar-amount" type="number" min="0" step="any" />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
-        <div>
-          <select id="countries">
-            {this.props.countries.map((country) => {
-              return <option key={country.id}>{country.code}</option>;
-            })}
-          </select>
-        </div>
+        <Form
+          amount={this.state.amount}
+          handleChange={this.handleChange}
+          handleSubmit={this.handleSubmit}
+        />
+        <SelectCountry
+          countries={this.props.countries}
+          handleChange={this.handleChange}
+        />
       </div>
     );
   }
