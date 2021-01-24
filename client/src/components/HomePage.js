@@ -1,7 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchCountries } from '../store/countries';
 
 class HomePage extends React.Component {
+  componentDidMount() {
+    this.props.fetchCountries();
+  }
   render() {
+    console.log(this.props);
     return (
       <div>
         <div id="title">
@@ -15,11 +21,27 @@ class HomePage extends React.Component {
           </form>
         </div>
         <div>
-          <select id="countries"></select>
+          <select id="countries">
+            {this.props.countries.map((country) => {
+              return <option key={country.id}>{country.code}</option>;
+            })}
+          </select>
         </div>
       </div>
     );
   }
 }
 
-export default HomePage;
+const mapState = (state) => {
+  return {
+    countries: state.countriesReducer,
+  };
+};
+
+const mapDispatch = (dispatch) => {
+  return {
+    fetchCountries: () => dispatch(fetchCountries()),
+  };
+};
+
+export default connect(mapState, mapDispatch)(HomePage);

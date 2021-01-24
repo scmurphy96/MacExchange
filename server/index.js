@@ -22,7 +22,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../public')));
 
 // routes
-app.use('/api', require('./routes/api'));
+app.use('/api', require('./api'));
 
 // const CONNECTION_URL = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.y0ngj.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority`;
 // const PORT = process.env.PORT || 5000;
@@ -49,7 +49,7 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message || 'Internal server error');
 });
 
-const PORT = 3000;
+const PORT = 8080;
 
 async function sync() {
   await db.sync();
