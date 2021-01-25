@@ -5,6 +5,7 @@ const csvdata = 'big-mac-adjusted-index.csv';
 
 async function convert() {
   const jsonObj = await csv().fromFile(csvdata);
+  console.log(jsonObj);
   return jsonObj;
 }
 

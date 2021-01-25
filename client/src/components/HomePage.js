@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { fetchCountries } from '../store/countries';
 import SelectCountry from './SelectCountry';
 import Form from './Form';
+// import Map from './ChoroplethMap';
+import BubbleChart from './BubbleChart';
 
 class HomePage extends React.Component {
   constructor() {
@@ -10,6 +12,7 @@ class HomePage extends React.Component {
     this.state = {
       amount: 0,
       country: '',
+      total: 0,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,6 +26,16 @@ class HomePage extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    for (let i = 0; i < this.props.countries.length; i++) {
+      if (this.props.countries[i].name === this.state.country) {
+        const divide =
+          this.props.countries[52].price / this.props.countries[i].price;
+        const result = Number(this.state.amount) * divide;
+        this.setState({
+          total: result.toFixed(2),
+        });
+      }
+    }
   }
 
   componentDidMount() {
@@ -43,6 +56,10 @@ class HomePage extends React.Component {
           countries={this.props.countries}
           handleChange={this.handleChange}
         />
+        <div>
+          <h1>{`$${this.state.amount} is worth approximately $${this.state.total} in ${this.state.country}`}</h1>
+        </div>
+        <BubbleChart />
       </div>
     );
   }
