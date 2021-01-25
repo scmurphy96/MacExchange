@@ -1,0 +1,11 @@
+.smaller circle {
+  fill: red;
+}
+
+.larger circle {
+  fill: gold;
+}
+
+.equal circle {
+  fill: green;
+}

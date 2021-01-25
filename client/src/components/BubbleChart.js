@@ -3,6 +3,7 @@ import * as d3 from 'd3';
 // import { connect } from 'react-redux';
 // import { fetchCountries } from '../store/countries';
 import data from '../d3file';
+import '../bubble.css';
 
 class BubbleChart extends React.Component {
   constructor(props) {
@@ -32,13 +33,16 @@ class BubbleChart extends React.Component {
       .selectAll('g')
       .data(root.leaves())
       .join('g')
-      .attr('transform', (d) => `translate(${d.x + 1},${d.y + 1})`);
+      .attr('transform', (d) => `translate(${d.x + 1},${d.y + 1})`)
+      .classed('smaller', (d) => d.data.price > 5.66)
+      .classed('larger', (d) => d.data.price < 5.66)
+      .classed('equal', (d) => d.data.price == 5.66);
 
     leaf
       .append('circle')
       .attr('r', (d) => d.r)
       .attr('fill-opacity', 0.8)
-      .attr('fill', 'red');
+      .attr('fill');
 
     leaf
       .append('text')
