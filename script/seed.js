@@ -1,7 +1,7 @@
 const db = require('../server/db/db');
 const BigMac = require('../server/models/bigMac');
 const csv = require('csvtojson');
-const csvdata = 'big-mac-adjusted-index.csv';
+const csvdata = 'bigMacData.csv';
 
 async function convert() {
   const jsonObj = await csv().fromFile(csvdata);

@@ -1,0 +1,56 @@
+code,currency,name,price
+ARG,ARS,Argentina,320
+AUS,AUD,Australia,6.48
+AZE,AZN,Azerbaijan,3.95
+BHR,BHD,Bahrain,1.5
+BRA,BRL,Brazil,21.9
+GBR,GBP,Britain,3.29
+CAN,CAD,Canada,6.77
+CHL,CLP,Chile,2940
+CHN,CNY,China,22.4
+COL,COP,Colombia,12950
+CRI,CRC,Costa Rica,2350
+HRV,HRK,Croatia,23
+CZE,CZK,Czech Republic,89
+DNK,DKK,Denmark,30
+EGY,EGP,Egypt,42.5
+EUZ,EUR,Euro area,4.25
+GTM,GTQ,Guatemala,25
+HND,HNL,Honduras,87
+HKG,HKD,Hong Kong,20.5
+HUN,HUF,Hungary,900
+IND,INR,India,190
+IDN,IDR,Indonesia,34000
+ISR,ILS,Israel,17
+JPN,JPY,Japan,390
+JOR,JOD,Jordan,2.3
+KWT,KWD,Kuwait,1.15
+MYS,MYR,Malaysia,9.99
+MEX,MXN,Mexico,54
+MDA,MDL,Moldova,50
+NZL,NZD,New Zealand,6.8
+NIC,NIO,Nicaragua,124
+NOR,NOK,Norway,52
+OMN,OMR,Oman,1.1
+PAK,PKR,Pakistan,550
+PER,PEN,Peru,11.9
+PHL,PHP,Philippines,142
+POL,PLN,Poland,13.08
+QAT,QAR,Qatar,13
+ROU,RON,Romania,9.9
+RUS,RUB,Russia,135
+SAU,SAR,Saudi Arabia,14
+SGP,SGD,Singapore,5.9
+ZAF,ZAR,South Africa,33.5
+KOR,KRW,South Korea,4500
+LKA,LKR,Sri Lanka,700
+SWE,SEK,Sweden,52.88
+CHE,CHF,Switzerland,6.5
+TWN,TWD,Taiwan,72
+THA,THB,Thailand,128
+TUR,TRY,Turkey,14.99
+UKR,UAH,Ukraine,62
+ARE,AED,United Arab Emirates,14.75
+USA,USD,United States,5.66
+URY,UYU,Uruguay,204
+VNM,VND,Vietnam,66000

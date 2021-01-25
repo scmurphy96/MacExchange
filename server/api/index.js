@@ -6,6 +6,7 @@ const router = require('express').Router();
 // const CONNECTION_URL = require('../index');
 
 router.use('/countries', require('./countries'));
+router.use('/exchanges', require('./exchanges'));
 
 // router.get('/', async (req, res, next) => {
 //   const resultArray = [];

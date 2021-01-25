@@ -5,6 +5,9 @@ const BigMac = db.define('bigmac', {
   code: {
     type: Sequelize.STRING,
   },
+  currency: {
+    type: Sequelize.STRING,
+  },
   name: {
     type: Sequelize.STRING,
   },
