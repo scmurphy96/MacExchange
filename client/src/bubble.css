@@ -2,10 +2,10 @@
   fill: red;
 }
 
-.larger circle {
-  fill: gold;
+.equal circle {
+  fill: gray;
 }
 
-.equal circle {
+.larger circle {
   fill: green;
 }

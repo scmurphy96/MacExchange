@@ -1,4 +1,5 @@
 const data = [
+  { code: 'USA', name: 'United States', price: '5.66' },
   { code: 'ARG', name: 'Argentina', price: '3.748231303' },
   { code: 'AUS', name: 'Australia', price: '4.98474' },
   { code: 'AZE', name: 'Azerbaijan', price: '2.324896998' },
@@ -9,7 +10,6 @@ const data = [
   { code: 'CHL', name: 'Chile', price: '4.086596935' },
   { code: 'CHN', name: 'China', price: '3.459406032' },
   { code: 'COL', name: 'Colombia', price: '3.742233781' },
-  { code: 'CRI', name: 'Costa Rica', price: '3.828795803' },
   { code: 'HRV', name: 'Croatia', price: '3.686635945' },
   { code: 'CZE', name: 'Czech Republic', price: '4.122106999' },
   { code: 'DNK', name: 'Denmark', price: '4.901440207' },
@@ -29,7 +29,6 @@ const data = [
   { code: 'MEX', name: 'Mexico', price: '2.684597124' },
   { code: 'MDA', name: 'Moldova', price: '2.90275762' },
   { code: 'NZL', name: 'New Zealand', price: '4.87424' },
-  { code: 'NIC', name: 'Nicaragua', price: '3.558586093' },
   { code: 'NOR', name: 'Norway', price: '6.086213556' },
   { code: 'OMN', name: 'Oman', price: '2.857142857' },
   { code: 'PAK', name: 'Pakistan', price: '3.429996882' },
@@ -51,7 +50,6 @@ const data = [
   { code: 'TUR', name: 'Turkey', price: '2.006559133' },
   { code: 'UKR', name: 'Ukraine', price: '2.203269367' },
   { code: 'ARE', name: 'United Arab Emirates', price: '4.015626914' },
-  { code: 'USA', name: 'United States', price: '5.66' },
   { code: 'URY', name: 'Uruguay', price: '4.800564772' },
   { code: 'VNM', name: 'Vietnam', price: '2.861602497' },
 ];

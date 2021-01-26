@@ -11,16 +11,12 @@ const setExchange = (exchangeRate, currencyName) => ({
 export const fetchExchangeRate = (currency) => {
   return async (dispatch) => {
     try {
-      console.log('Got here');
       const { data } = await axios.get(`/api/exchanges/${currency}`);
+      console.log(data);
       const exchangeRate =
         data['Realtime Currency Exchange Rate']['5. Exchange Rate'];
       const currencyName =
         data['Realtime Currency Exchange Rate']['4. To_Currency Name'];
-      console.log(
-        'data ----> ',
-        data['Realtime Currency Exchange Rate']['5. Exchange Rate']
-      );
       dispatch(setExchange(exchangeRate, currencyName));
     } catch (err) {
       console.error(err);

@@ -76,7 +76,6 @@ class BubbleChart extends React.Component {
   render() {
     return (
       <div>
-        <h2>Chart</h2>
         <div id="bubblechart" ref={(element) => (this.element = element)} />
       </div>
     );
